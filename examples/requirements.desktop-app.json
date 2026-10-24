@@ -1,0 +1,137 @@
+{
+  "release_identity_fields": ["version", "commit", "package_path", "package_sha256", "platforms", "source_clean"],
+  "gates": [
+    {
+      "name": "Product Completeness",
+      "requirements": [
+        { "id": "REL-1.1", "text": "Every advertised feature exists and works end to end." },
+        { "id": "REL-1.2", "text": "Every advertised action has a discoverable entry point." },
+        { "id": "REL-1.3", "text": "Every entry point produces a truthful, verifiable result." },
+        { "id": "REL-1.4", "text": "Every workflow has loading, success, empty, error, cancellation, and recovery states." },
+        { "id": "REL-1.5", "text": "No placeholder, dead control, demonstration-only response, fabricated data, or hidden developer prerequisite ships." },
+        { "id": "REL-1.6", "text": "Features work with a new user account and with existing user data." }
+      ]
+    },
+    {
+      "name": "Packaging and Installation",
+      "requirements": [
+        { "id": "REL-2.1", "text": "A customer installs from one current, signed release artifact." },
+        { "id": "REL-2.2", "text": "A fresh machine needs no repository, compiler, package manager, terminal command, developer account, or undocumented runtime." },
+        { "id": "REL-2.3", "text": "Required models, voices, assets, helpers, schemas, migrations, and supported local services are packaged or installed by the signed setup flow." },
+        { "id": "REL-2.4", "text": "First launch detects and repairs incomplete setup." },
+        { "id": "REL-2.5", "text": "Installation, update, repair, uninstall, and reinstall are tested." },
+        { "id": "REL-2.6", "text": "The running binary is proven to match the current source commit and package hash." }
+      ]
+    },
+    {
+      "name": "Onboarding and Permissions",
+      "requirements": [
+        { "id": "REL-3.1", "text": "The app explains what it needs, why it needs it, and what remains usable without it." },
+        { "id": "REL-3.2", "text": "Permission requests occur in context." },
+        { "id": "REL-3.3", "text": "Every Open Settings action opens the exact relevant operating-system destination when the platform permits deep linking." },
+        { "id": "REL-3.4", "text": "When direct navigation is unavailable, the app provides accurate, version-specific steps and confirms completion after the user returns." },
+        { "id": "REL-3.5", "text": "Denial, revocation, restriction, and later approval all recover without reinstalling." },
+        { "id": "REL-3.6", "text": "Setup can be resumed safely after interruption." },
+        { "id": "REL-3.7", "text": "A setup guide exists inside the product and is also available outside it." }
+      ]
+    },
+    {
+      "name": "Built-In Fallback and Real Connections",
+      "requirements": [
+        { "id": "REL-4.1", "text": "Every capability that can depend on hardware, an account, a provider, a network, or external data has a working built-in local fallback that lets the user understand and use the product immediately." },
+        { "id": "REL-4.2", "text": "Every such capability has a guided real connection path that authenticates, validates, exercises, and proves the supported external service or hardware." },
+        { "id": "REL-4.3", "text": "Fallbacks are clearly identified and never masquerade as live data, live hardware, sent communication, real analytics, or completed external actions." }
+      ]
+    },
+    {
+      "name": "User Experience and Mapping",
+      "requirements": [
+        { "id": "REL-5.1", "text": "The information architecture maps every product promise to a visible user journey." },
+        { "id": "REL-5.2", "text": "Labels, instructions, and outcomes use consistent language." },
+        { "id": "REL-5.3", "text": "Navigation never strands the user." },
+        { "id": "REL-5.4", "text": "Destructive or consequential actions clearly identify their target and result." },
+        { "id": "REL-5.5", "text": "Immediate actions acknowledge immediately; longer work shows progress, supports cancellation where safe, and finishes with a useful result or actionable recovery." },
+        { "id": "REL-5.6", "text": "Voice actions, where offered, visibly acknowledge capture and mode changes; recording or note-taking visibly shows its active state and produces an end summary." },
+        { "id": "REL-5.7", "text": "No workflow depends on the user knowing an undocumented phrase or command." }
+      ]
+    },
+    {
+      "name": "Responsive Layout and Accessibility",
+      "requirements": [
+        { "id": "REL-6.1", "text": "No supported window size, display scale, text size, language, orientation, or accessibility setting causes overlap, clipping, illegible text, hidden controls, unreachable content, or input obstruction." },
+        { "id": "REL-6.2", "text": "Desktop products pass minimum window, maximum window, full-screen, multi-display, scaled-display, and high-DPI tests." },
+        { "id": "REL-6.3", "text": "Windows products pass 100%, 125%, 150%, 175%, and 200% display scaling where supported." },
+        { "id": "REL-6.4", "text": "Apple products pass supported Dynamic Type and accessibility settings." },
+        { "id": "REL-6.5", "text": "Keyboard navigation, focus order, screen-reader labels, contrast, reduced motion, and non-pointer operation are complete." },
+        { "id": "REL-6.6", "text": "Layout tests include long localized strings and realistic maximum-content states." }
+      ]
+    },
+    {
+      "name": "Reliability and Recovery",
+      "requirements": [
+        { "id": "REL-7.1", "text": "Repeated launch, force quit, crash recovery, sleep/wake, restart, user switching, network loss, provider outage, device loss, and interrupted work do not corrupt state." },
+        { "id": "REL-7.2", "text": "Offline behavior is deterministic and honestly represented." },
+        { "id": "REL-7.3", "text": "Failed jobs can be retried without duplication or data loss." },
+        { "id": "REL-7.4", "text": "Migrations preserve legitimate user data." },
+        { "id": "REL-7.5", "text": "Repair and reset operations identify exactly what they change." },
+        { "id": "REL-7.6", "text": "Support diagnostics are user-accessible, privacy-safe, and actionable." }
+      ]
+    },
+    {
+      "name": "Performance",
+      "requirements": [
+        { "id": "REL-8.1", "text": "Direct mode changes and local interface state changes acknowledge immediately." },
+        { "id": "REL-8.2", "text": "Where voice input is offered, activation, listening state, and cancellation give immediate visible feedback." },
+        { "id": "REL-8.3", "text": "The interface does not freeze, flash, jump unexpectedly, or appear dead during supported work." },
+        { "id": "REL-8.4", "text": "App-specific measurable launch, interaction, processing, memory, storage, and energy thresholds are defined and met." },
+        { "id": "REL-8.5", "text": "Performance evidence is collected on the minimum supported hardware, not only a development machine." }
+      ]
+    },
+    {
+      "name": "Security, Privacy, and Replication Resistance",
+      "requirements": [
+        { "id": "REL-9.1", "text": "Distributed packages contain no source code, source maps, debug symbols, credentials, signing material, private datasets, internal prompts, test fixtures containing private data, or development tooling." },
+        { "id": "REL-9.2", "text": "Production binaries are signed, hardened, stripped, integrity-checked, and protected against casual extraction and tampering." },
+        { "id": "REL-9.3", "text": "Proprietary logic uses compiled modules, obfuscation, encrypted assets, and server-held components where that does not violate required local operation." },
+        { "id": "REL-9.4", "text": "Licensing resists copying and redistribution while preserving legitimate install, reinstall, update, and recovery." },
+        { "id": "REL-9.5", "text": "Updates require authenticated, signed packages and resist rollback and spoofing." },
+        { "id": "REL-9.6", "text": "Secrets remain in approved secure storage and never appear in logs, packages, crash reports, or client-visible diagnostics." },
+        { "id": "REL-9.7", "text": "Dependencies pass vulnerability, license, provenance, supply-chain, malware, and secret scans." },
+        { "id": "REL-9.8", "text": "Every platform receives package inspection, extraction, tampering, entitlement-bypass, update-spoofing, and clean-room replication tests." },
+        { "id": "REL-9.9", "text": "A recipient cannot reconstruct source, extract protected assets, retrieve secrets, bypass product controls, or clone a functional product from the shipped artifact." }
+      ]
+    },
+    {
+      "name": "Truth and Data Integrity",
+      "requirements": [
+        { "id": "REL-10.1", "text": "Real-world claims are backed by real sources." },
+        { "id": "REL-10.2", "text": "Synthetic or demonstration data is unmistakably labeled and isolated from live results." },
+        { "id": "REL-10.3", "text": "Empty states remain honest." },
+        { "id": "REL-10.4", "text": "The shipped package contains no developer, employee, test-user, or previous customer's private data." },
+        { "id": "REL-10.5", "text": "Calculations expose their inputs and can be reproduced." },
+        { "id": "REL-10.6", "text": "Actions claimed as sent, published, recorded, connected, controlled, or completed have receipts from the responsible system." }
+      ]
+    },
+    {
+      "name": "Documentation and Supportability",
+      "requirements": [
+        { "id": "REL-11.1", "text": "A first-run guide, feature guide, permission guide, integration guide, recovery guide, and uninstall guide exist." },
+        { "id": "REL-11.2", "text": "Instructions match the current release and each supported operating-system version." },
+        { "id": "REL-11.3", "text": "Help is reachable from the relevant feature." },
+        { "id": "REL-11.4", "text": "Error messages explain what happened, what was preserved, and the next recovery action." },
+        { "id": "REL-11.5", "text": "The user can export a privacy-safe diagnostic bundle without development tools." }
+      ]
+    },
+    {
+      "name": "Adversarial Verification",
+      "requirements": [
+        { "id": "REL-12.1", "text": "Tests attempt to disprove completion, not merely confirm the happy path." },
+        { "id": "REL-12.2", "text": "Every requirement includes success, boundary, denial, interruption, repetition, malformed-input, stale-state, and recovery cases where applicable." },
+        { "id": "REL-12.3", "text": "Clean-machine tests use machines with no prior installation of the product." },
+        { "id": "REL-12.4", "text": "Existing-machine tests include supported prior releases and realistic user data." },
+        { "id": "REL-12.5", "text": "Release testing uses the distributed package, never only a development run." },
+        { "id": "REL-12.6", "text": "The final verdict is derived from evidence, not a subjective sign-off." }
+      ]
+    }
+  ]
+}

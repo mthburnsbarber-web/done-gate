@@ -1,0 +1,33 @@
+{
+  "name": "done-gate",
+  "version": "1.0.0",
+  "description": "Fail-closed release verdict. Every requirement needs passing evidence bound to the SHA-256 of the package you ship.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "done-gate": "./done-gate.mjs"
+  },
+  "exports": "./done-gate.mjs",
+  "files": [
+    "done-gate.mjs",
+    "examples/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mthburnsbarber-web/done-gate.git"
+  },
+  "keywords": [
+    "release",
+    "definition-of-done",
+    "evidence",
+    "sha256",
+    "ci",
+    "gate"
+  ]
+}

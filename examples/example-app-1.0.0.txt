@@ -1,0 +1,6 @@
+example-app 1.0.0 (build 2)
+
+This file stands in for a release package such as a .zip, .dmg or .tar.gz.
+done-gate hashes it and compares the result with release.package_sha256.
+
+Change one byte and every evidence row bound to the old hash goes stale.

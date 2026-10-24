@@ -1,0 +1,2 @@
+# The example artifact is hashed byte for byte. Never convert its line endings.
+examples/example-app-1.0.0.txt -text
